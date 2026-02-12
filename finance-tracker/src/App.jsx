@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
 import ExpensesPage from './pages/ExpensesPage';
+import IncomePage from './pages/IncomePage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           </div>
         } />
         <Route path="/expenses" element={<ExpensesPage />} />
+        <Route path="/income" element={<IncomePage />} />
       </Routes>
     </Router>
   );
