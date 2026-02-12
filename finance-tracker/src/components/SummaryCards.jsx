@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SummaryCards = () => {
+  const navigate = useNavigate();
+
+  const handleExpensesClick = () => {
+    navigate('/expenses');
+  };
+
   return (
     <div className="px-6 pb-6">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -33,7 +40,10 @@ const SummaryCards = () => {
         </div>
 
         {/* Monthly Expenses Card */}
-        <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
+        <div 
+          onClick={handleExpensesClick}
+          className="bg-white rounded-lg shadow-md p-6 border border-gray-200 cursor-pointer hover:shadow-lg transition-shadow"
+        >
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-medium text-gray-600">Monthly Expenses</h3>
             <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
