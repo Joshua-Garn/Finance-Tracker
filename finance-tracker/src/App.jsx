@@ -5,6 +5,7 @@ import Dashboard from './components/Dashboard';
 import Footer from './components/Footer';
 import ExpensesPage from './pages/ExpensesPage';
 import IncomePage from './pages/IncomePage';
+import SavingsProgressPage from './pages/SavingsProgressPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         } />
         <Route path="/expenses" element={<ExpensesPage />} />
         <Route path="/income" element={<IncomePage />} />
+        <Route path="/savings" element={<SavingsProgressPage />} />
       </Routes>
     </Router>
   );
