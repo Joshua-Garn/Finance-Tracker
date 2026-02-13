@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SavingsProgress = () => {
+  const navigate = useNavigate();
+
+  const handleViewAll = () => {
+    navigate('/savings');
+  };
+
   const savingsGoals = [
     { name: 'Emergency Fund', current: 8500, target: 10000, color: 'blue' },
     { name: 'Vacation', current: 2300, target: 5000, color: 'green' },
@@ -11,7 +18,10 @@ const SavingsProgress = () => {
     <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-gray-900">Savings Progress</h3>
-        <button className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+        <button 
+          onClick={handleViewAll}
+          className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+        >
           View All
         </button>
       </div>
